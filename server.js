@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("./app/models");
 db.mongoose
-  .connect(db.url, {
+  .connect(db.url, {user: "docker_mongo_username", pass: "docker_mongo_password"}, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

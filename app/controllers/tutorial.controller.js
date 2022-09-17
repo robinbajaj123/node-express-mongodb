@@ -5,6 +5,7 @@ const Tutorial = db.tutorials;
 exports.create = (req, res) => {
   // Validate request
   if (!req.body.title) {
+    console.log(`received title ${JSON.stringify(req.body)}`)
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
